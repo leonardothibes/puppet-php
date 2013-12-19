@@ -1,4 +1,4 @@
 puppet-php
 ==========
 
-A puppet module for manage PHP
+A puppet module to manage PHP.
