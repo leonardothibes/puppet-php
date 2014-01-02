@@ -1,11 +1,8 @@
 name    'leonardothibes-php'
-version '0.0.1'
-source 'UNKNOWN'
-author 'leonardothibes'
-license 'Apache License, Version 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
-
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+author  'leonardothibes'
+version '1.0.0'
+license 'MIT'
+summary 'A puppet module to manage PHP'
+description 'A puppet module to manage PHP'
+source 'git://github.com/leonardothibes/puppet-php.git'
+project_page 'http://github.com/leonardothibes/puppet-php'
