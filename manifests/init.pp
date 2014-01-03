@@ -1,6 +1,7 @@
 class php(
-  $ensure                  = "present",
-  $inilink                 = true,
+  $ensure                  = $php::params::ensure,
+  $inilink                 = $php::params::inilink,
+  $modules                 = $php::params::modules,
   $error_reporting         = $php::params::error_reporting,
   $display_errors          = $php::params::display_errors,
   $html_errors             = $php::params::html_errors,

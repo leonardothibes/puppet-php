@@ -4,6 +4,7 @@ class php::params
 	$ensure  = "present"
 	$confdir = "/etc/php5"
 	$inilink = true
+	$modules = []
 	# Install options
 
 	# PHP.INI options (errors)
