@@ -223,11 +223,11 @@ engine = On
 ; Development Value: Off
 ; Production Value: Off
 ; http://php.net/short-open-tag
-short_open_tag = On
+short_open_tag = <%=@short_open_tag%>
 
 ; Allow ASP-style <% %> tags.
 ; http://php.net/asp-tags
-asp_tags = Off
+asp_tags = <%=@asp_tags%>
 
 ; The number of significant digits displayed in floating point numbers.
 ; http://php.net/precision
@@ -382,13 +382,13 @@ safe_mode_protected_env_vars = LD_LIBRARY_PATH
 ; It receives a comma-delimited list of function names. This directive is
 ; *NOT* affected by whether Safe Mode is turned On or Off.
 ; http://php.net/disable-functions
-disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+disable_functions = <%=@disable_functions%>
 
 ; This directive allows you to disable certain classes for security reasons.
 ; It receives a comma-delimited list of class names. This directive is
 ; *NOT* affected by whether Safe Mode is turned On or Off.
 ; http://php.net/disable-classes
-disable_classes =
+disable_classes = <%=@disable_classes%>
 
 ; Colors for Syntax Highlighting mode.  Anything that's acceptable in
 ; <span style="color: ???????"> would work.
@@ -432,7 +432,7 @@ zend.enable_gc = On
 ; threat in any way, but it makes it possible to determine whether you use PHP
 ; on your server or not.
 ; http://php.net/expose-php
-expose_php = On
+expose_php = <%=@expose_php%>
 
 ;;;;;;;;;;;;;;;;;;;
 ; Resource Limits ;
@@ -441,7 +441,7 @@ expose_php = On
 ; Maximum execution time of each script, in seconds
 ; http://php.net/max-execution-time
 ; Note: This directive is hardcoded to 0 for the CLI SAPI
-max_execution_time = 30
+max_execution_time = <%=@max_execution_time%>
 
 ; Maximum amount of time each script may spend parsing request data. It's a good
 ; idea to limit this time on productions servers in order to eliminate unexpectedly
@@ -451,7 +451,7 @@ max_execution_time = 30
 ; Development Value: 60 (60 seconds)
 ; Production Value: 60 (60 seconds)
 ; http://php.net/max-input-time
-max_input_time = 60
+max_input_time = <%=@max_input_time%>
 
 ; Maximum input variable nesting level
 ; http://php.net/max-input-nesting-level
@@ -462,7 +462,7 @@ max_input_time = 60
 
 ; Maximum amount of memory a script may consume (128MB)
 ; http://php.net/memory-limit
-memory_limit = 128M
+memory_limit = <%=@memory_limit%>M
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Error handling and logging ;
@@ -518,7 +518,7 @@ memory_limit = 128M
 ; Development Value: E_ALL | E_STRICT
 ; Production Value: E_ALL & ~E_DEPRECATED
 ; http://php.net/error-reporting
-error_reporting = E_ALL | E_STRICT
+error_reporting = <%=@error_reporting%>
 
 ; This directive controls whether or not and where PHP will output errors,
 ; notices and warnings too. Error output is very useful during development, but
@@ -535,7 +535,7 @@ error_reporting = E_ALL | E_STRICT
 ; Development Value: On
 ; Production Value: Off
 ; http://php.net/display-errors
-display_errors = On
+display_errors = <%=@display_errors%>
 
 ; The display of errors which occur during PHP's startup sequence are handled
 ; separately from display_errors. PHP's default behavior is to suppress those
@@ -556,7 +556,7 @@ display_startup_errors = Off
 ; Development Value: On
 ; Production Value: On
 ; http://php.net/log-errors
-log_errors = On
+log_errors = <%=@log_errors%>
 
 ; Set maximum length of log_errors. In error_log information about the source is
 ; added. The default is 1024 and 0 allows to not apply any maximum length at all.
@@ -608,7 +608,7 @@ track_errors = Off
 ; Development Value: On
 ; Production value: Off
 ; http://php.net/html-errors
-html_errors = On
+html_errors = <%=@html_errors%>
 
 ; If html_errors is set On PHP produces clickable error messages that direct
 ; to a page describing the error or function causing the error in detail.
@@ -640,7 +640,7 @@ html_errors = On
 ; empty.
 ; http://php.net/error-log
 ; Example:
-error_log = /var/log/apache2/php.log
+error_log = <%=@error_log%>
 ; Log errors to syslog (Event Log on NT, not valid in Windows 95).
 ;error_log = syslog
 
@@ -700,7 +700,7 @@ request_order = "GP"
 ; register_globals to be on;  Using form variables as globals can easily lead
 ; to possible security problems, if the code is not very well thought of.
 ; http://php.net/register-globals
-register_globals = Off
+register_globals = <%=@register_globals%>
 
 ; Determines whether the deprecated long $HTTP_*_VARS type predefined variables
 ; are registered by PHP or not. As they are deprecated, we obviously don't
@@ -737,7 +737,7 @@ auto_globals_jit = On
 
 ; Maximum size of POST data that PHP will accept.
 ; http://php.net/post-max-size
-post_max_size = 8M
+post_max_size = <%=@post_max_size%>M
 
 ; Magic quotes are a preprocessing feature of PHP where PHP will attempt to
 ; escape any character sequences in GET, POST, COOKIE and ENV data which might
@@ -777,11 +777,11 @@ auto_append_file =
 ;
 ; PHP's built-in default is text/html
 ; http://php.net/default-mimetype
-default_mimetype = "text/html"
+default_mimetype = "<%=@default_mimetype%>"
 
 ; PHP's default character set is set to empty.
 ; http://php.net/default-charset
-;default_charset = "iso-8859-1"
+default_charset = "<%=@default_charset%>"
 
 ; Always populate the $HTTP_RAW_POST_DATA variable. PHP's default behavior is
 ; to disable this feature.
@@ -793,7 +793,7 @@ default_mimetype = "text/html"
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; UNIX: "/path1:/path2"
-include_path = ".:/usr/share/php"
+include_path = "<%=@include_path%>"
 ;
 ; Windows: "\path1;\path2"
 ;include_path = ".;c:\php\includes"
@@ -879,19 +879,19 @@ enable_dl = Off
 
 ; Whether to allow HTTP file uploads.
 ; http://php.net/file-uploads
-file_uploads = On
+file_uploads = <%=@file_uploads%>
 
 ; Temporary directory for HTTP uploaded files (will use system default if not
 ; specified).
 ; http://php.net/upload-tmp-dir
-;upload_tmp_dir =
+upload_tmp_dir = <%=@upload_tmp_dir%>
 
 ; Maximum allowed size for uploaded files.
 ; http://php.net/upload-max-filesize
-upload_max_filesize = 20M
+upload_max_filesize = <%=@upload_max_filesize%>M
 
 ; Maximum number of files that can be uploaded via a single request
-max_file_uploads = 20
+max_file_uploads = <%=@max_file_uploads%>
 
 ;;;;;;;;;;;;;;;;;;
 ; Fopen wrappers ;
@@ -899,11 +899,11 @@ max_file_uploads = 20
 
 ; Whether to allow the treatment of URLs (like http:// or ftp://) as files.
 ; http://php.net/allow-url-fopen
-allow_url_fopen = On
+allow_url_fopen = <%=@allow_url_fopen%>
 
 ; Whether to allow include/require to open URLs (like http:// or ftp://) as files.
 ; http://php.net/allow-url-include
-allow_url_include = Off
+allow_url_include = <%=@allow_url_include%>
 
 ; Define the anonymous ftp password (your email address). PHP's default setting
 ; for this is empty.
@@ -916,7 +916,7 @@ allow_url_include = Off
 
 ; Default timeout for socket based streams (seconds)
 ; http://php.net/default-socket-timeout
-default_socket_timeout = 60
+default_socket_timeout = <%=@default_socket_timeout%>
 
 ; If your scripts have to deal with files from Macintosh systems,
 ; or you are running on a Mac and need to deal with files from
@@ -957,7 +957,7 @@ default_socket_timeout = 60
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
-date.timezone = America/Sao_Paulo
+date.timezone = <%=@date_timezone%>
 
 ; http://php.net/date.default-latitude
 ;date.default_latitude = 31.7667
@@ -1024,7 +1024,7 @@ pdo_mysql.cache_size = 2000
 ; Default socket name for local MySQL connects.  If empty, uses the built-in
 ; MySQL defaults.
 ; http://php.net/pdo_mysql.default-socket
-pdo_mysql.default_socket = /var/run/mysqld/mysqld.sock
+pdo_mysql.default_socket = <%=@mysql_default_socket%>
 
 [Phar]
 ; http://php.net/phar.readonly
@@ -1178,7 +1178,7 @@ mysql.default_port =
 ; Default socket name for local MySQL connects.  If empty, uses the built-in
 ; MySQL defaults.
 ; http://php.net/mysql.default-socket
-mysql.default_socket = /var/run/mysqld/mysqld.sock
+mysql.default_socket = <%=@mysql_default_socket%>
 
 ; Default host for mysql_connect() (doesn't apply in safe mode).
 ; http://php.net/mysql.default-host
@@ -1237,7 +1237,7 @@ mysqli.default_port = 3306
 ; Default socket name for local MySQL connects.  If empty, uses the built-in
 ; MySQL defaults.
 ; http://php.net/mysqli.default-socket
-mysqli.default_socket = /var/run/mysqld/mysqld.sock
+mysqli.default_socket = <%=@mysql_default_socket%>
 
 ; Default host for mysql_connect() (doesn't apply in safe mode).
 ; http://php.net/mysqli.default-host
@@ -1439,7 +1439,7 @@ session.save_handler = files
 ; where MODE is the octal representation of the mode. Note that this
 ; does not overwrite the process's umask.
 ; http://php.net/session.save-path
-;session.save_path = "/tmp"
+session.save_path = <%=@session_save_path%>
 
 ; Whether to use cookies.
 ; http://php.net/session.use-cookies
@@ -1457,11 +1457,11 @@ session.use_only_cookies = 1
 
 ; Name of the session (used as cookie name).
 ; http://php.net/session.name
-session.name = SESSID
+session.name = <%=@session_name%>
 
 ; Initialize session on request startup.
 ; http://php.net/session.auto-start
-session.auto_start = 0
+session.auto_start = <%=@session_auto_start%>
 
 ; Lifetime in seconds of cookie or, if 0, until browser is restarted.
 ; http://php.net/session.cookie-lifetime
@@ -1512,7 +1512,7 @@ session.gc_divisor = 1000
 ; After this number of seconds, stored data will be seen as 'garbage' and
 ; cleaned up by the garbage collection process.
 ; http://php.net/session.gc-maxlifetime
-session.gc_maxlifetime = 1440
+session.gc_maxlifetime = <%=@session_gc_maxlifetime%>
 
 ; NOTE: If you are using the subdirectory option for storing session files
 ;       (see session.save_path above), then garbage collection does *not*
@@ -1823,19 +1823,19 @@ tidy.clean_output = Off
 [soap]
 ; Enables or disables WSDL caching feature.
 ; http://php.net/soap.wsdl-cache-enabled
-soap.wsdl_cache_enabled=1
+soap.wsdl_cache_enabled = <%=@soap_wsdl_cache_enabled%>
 
 ; Sets the directory name where SOAP extension will put cache files.
 ; http://php.net/soap.wsdl-cache-dir
-soap.wsdl_cache_dir="/tmp"
+soap.wsdl_cache_dir = "<%=@soap_wsdl_cache_dir%>"
 
 ; (time to live) Sets the number of second while cached file will be used
 ; instead of original one.
 ; http://php.net/soap.wsdl-cache-ttl
-soap.wsdl_cache_ttl=86400
+soap.wsdl_cache_ttl = <%=@soap_wsdl_cache_ttl%>
 
 ; Sets the size of the cache limit. (Max. number of WSDL files to cache)
-soap.wsdl_cache_limit = 5
+soap.wsdl_cache_limit = <%=@soap_wsdl_cache_limit%>
 
 [sysvshm]
 ; A default size of the shared memory segment

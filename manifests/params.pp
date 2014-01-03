@@ -19,6 +19,7 @@ class php::params
 	$asp_tags                = "Off"
 	$allow_url_fopen         = "On"
 	$allow_url_include       = "Off"
+	$default_charset         = "utf-8"
 	$default_mimetype        = "text/html"
 	$date_timezone           = "America/Sao_Paulo"
 	$include_path            = ".:/usr/share/php"
@@ -28,15 +29,16 @@ class php::params
 	# PHP.INI options (limits)
 	$max_execution_time      = "30"
 	$max_input_time          = "60"
-	$memory_limit            = "128M" #Retirar o "M"
-	$post_max_size           = "8M"   #Retirar o "M"
+	$memory_limit            = "128"
+	$post_max_size           = "8"
 	$default_socket_timeout  = "60"
 	# PHP.INI options (limits)
 
 	# PHP.INI options (uploads)
 	$file_uploads            = "On"
-	$upload_max_filesize     = "20M"  #Retirar o "M"
+	$upload_max_filesize     = "20"
 	$max_file_uploads        = "20"
+	$upload_tmp_dir          = "/tmp"
 	# PHP.INI options (uploads)
 
 	# PHP.INI options (session)
