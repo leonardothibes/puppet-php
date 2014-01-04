@@ -1,6 +1,6 @@
 class php(
   $ensure                  = $php::params::ensure,
-  $inilink                 = $php::params::inilink,
+  $etclink                 = $php::params::etclink,
   $modules                 = $php::params::modules,
   $error_reporting         = $php::params::error_reporting,
   $display_errors          = $php::params::display_errors,
@@ -41,15 +41,7 @@ class php(
 
     case $ensure {
         'present': {
-			$packages = [
-				'libssl0.9.8',
-				'libssl-dev',
-				'php5',
-				'php5-cli',
-				'php5-dev',
-				'php-pear',
-			]
-			package {$packages: ensure => $ensure}
+			package {$php::params::packages: ensure => $ensure}
 
 			$files = [
 				"${php::params::confdir}/cli/php.ini",
@@ -63,11 +55,13 @@ class php(
 				mode    => 0644,
 				require => Package[$packages],
 			}
-			if $inilink == true {
+			if $etclink == true {
 				file {'/etc/php.ini':
 					ensure => link,
 					target => "${php::params::confdir}/apache2/php.ini",
 				}
+			} else {
+				file {'/etc/php.ini': ensure => absent}
 			}
         }   
         'absent': {

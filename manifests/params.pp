@@ -1,10 +1,18 @@
 class php::params
 {
 	# Install options
-	$ensure  = "present"
-	$confdir = "/etc/php5"
-	$inilink = true
-	$modules = []
+	$ensure   = "present"
+	$confdir  = "/etc/php5"
+	$etclink  = true
+	$modules  = []
+	$packages = [
+		'libssl0.9.8',
+		'libssl-dev',
+		'php5',
+		'php5-cli',
+		'php5-dev',
+		'php-pear',
+	]
 	# Install options
 
 	# PHP.INI options (errors)
