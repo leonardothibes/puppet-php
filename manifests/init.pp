@@ -41,8 +41,14 @@ class php(
 
     case $ensure {
         'present': {
+
+			# PHP packages instalation
 			package {$php::params::packages: ensure => $ensure}
 
+			# PHP modules instalation
+			php::module::install {$modules:}
+
+			# PHP.ini definitions
 			$files = [
 				"${php::params::confdir}/cli/php.ini",
 				"${php::params::confdir}/apache2/php.ini",
@@ -55,6 +61,9 @@ class php(
 				mode    => 0644,
 				require => Package[$packages],
 			}
+			# PHP.ini definitions
+
+			# PHP.ini link in /etc
 			if $etclink == true {
 				file {'/etc/php.ini':
 					ensure => link,
@@ -63,6 +72,10 @@ class php(
 			} else {
 				file {'/etc/php.ini': ensure => absent}
 			}
+			# PHP.ini link in /etc
+
+			# Extra PHP tools instalation
+			# Extra PHP tools instalation
         }   
         'absent': {
             include php::uninstall

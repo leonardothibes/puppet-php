@@ -8,4 +8,12 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-class {'php':}
+class {'php':
+	etclink => true,
+	#modules => ['apc','pgsql'],
+}
+
+#php::module::purge{'apc':}
+php::module::install{'apc':}
+php::module::install{'mysql':}
+php::module::install{'pgsql':}
