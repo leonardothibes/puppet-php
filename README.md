@@ -4,7 +4,7 @@ puppet-php
 A puppet module to manage PHP.
 
 ## Sample Usage
-Install php and use the provided configuration defaults:
+Install PHP and use the provided configuration defaults:
 ```puppet
 node default {
 	class {'php':}
@@ -14,6 +14,31 @@ or
 ```puppet
 node default {
 	include php
+}
+```
+
+Install PHP and some modules:
+```puppet
+class {'php':
+	modules => ['apc','mysql,'pgsql']
+}
+or
+```puppet
+class {'php':}
+php::module::install{'apc':}
+php::module::install{'mysql':}
+php::module::install{'pgsql':}
+```
+
+Purge modules:
+```puppet
+php::module::purge{'apc':}
+```
+
+Purge completly PHP:
+```puppet
+class {'php':
+	ensure => absent
 }
 ```
 
