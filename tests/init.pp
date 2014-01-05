@@ -10,7 +10,7 @@
 #
 class {'php':
 	modules => ['apc','pgsql','mysql','sybase','xdebug'],
-	extra   => ['code-sniffer','phing','phpdoc','composer'],
+	extra   => ['code-sniffer','phing','phpdoc','composer','phpunit'],
 }
 
 #php::module::install{'apc':}
