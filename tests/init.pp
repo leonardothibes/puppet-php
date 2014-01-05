@@ -11,6 +11,7 @@
 class {'php':
 	etclink => true,
 	modules => ['apc','pgsql','mysql','sybase','xdebug'],
+	extra   => ['composer','phing']
 }
 
 #php::module::install{'apc':}

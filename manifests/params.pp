@@ -5,6 +5,7 @@ class php::params
 	$confdir  = "/etc/php5"
 	$etclink  = true
 	$modules  = []
+	$extra    = []
 	$packages = [
 		'libapache2-mod-php5',
 		'libssl0.9.8',

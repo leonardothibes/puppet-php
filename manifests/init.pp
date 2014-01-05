@@ -2,6 +2,7 @@ class php(
   $ensure                  = $php::params::ensure,
   $etclink                 = $php::params::etclink,
   $modules                 = $php::params::modules,
+  $extra                   = $php::params::extra,
   $error_reporting         = $php::params::error_reporting,
   $display_errors          = $php::params::display_errors,
   $html_errors             = $php::params::html_errors,
@@ -78,7 +79,7 @@ class php(
 			# PHP.ini link in /etc
 
 			# Extra PHP tools instalation
-			# Extra PHP tools instalation
+			php::extra::install {$extra:}
         }   
         'absent': {
             include php::uninstall
