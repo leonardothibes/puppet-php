@@ -22,6 +22,7 @@ Install PHP and some modules:
 class {'php':
 	modules => ['apc','mysql,'pgsql']
 }
+```
 or
 ```puppet
 class {'php':}
