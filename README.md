@@ -20,7 +20,7 @@ node default {
 Install PHP and some modules:
 ```puppet
 class {'php':
-	modules => ['apc','mysql,'pgsql']
+	modules => ['apc','mysql','pgsql']
 }
 ```
 or
