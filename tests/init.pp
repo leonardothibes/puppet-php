@@ -9,8 +9,10 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'php':
-	modules => ['apc','pgsql','mysql','sybase','xdebug'],
-	extra   => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+	modules        => ['apc','pgsql','mysql','sybase','xdebug'],
+	extra          => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+	display_errors => 'Off',
+	etclink        => true,
 }
 
 #php::module::install{'apc':}

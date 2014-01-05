@@ -3,7 +3,6 @@ class php::params
 	# Install options
 	$ensure   = "present"
 	$confdir  = "/etc/php5"
-	$etclink  = true
 	$modules  = []
 	$extra    = []
 	$packages = [
