@@ -7,7 +7,13 @@ class php::module
 		} else {
 			$modulename = "php5-${module}"
 		}
-		package {$modulename: ensure => present}
+		if !defined(Package[$modulename]) {
+			package {$modulename:
+				ensure => present,
+				before => Exec["restart-${modulename}"],
+			}
+			php::apache::restart {"restart-${modulename}":}
+		}
 	}
 
 	define purge($module = $title)

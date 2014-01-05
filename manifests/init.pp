@@ -59,15 +59,18 @@ class php(
 				owner   => root,
 				group   => root,
 				mode    => 0644,
-				require => Package[$packages],
+				require => Package[$php::params::packages],
+				before  => Exec['restart-php-ini'],
 			}
+			php::apache::restart {'restart-php-ini':}
 			# PHP.ini definitions
 
 			# PHP.ini link in /etc
 			if $etclink == true {
 				file {'/etc/php.ini':
-					ensure => link,
-					target => "${php::params::confdir}/apache2/php.ini",
+					ensure  => link,
+					target  => "${php::params::confdir}/apache2/php.ini",
+					require => Package[$php::params::packages],
 				}
 			} else {
 				file {'/etc/php.ini': ensure => absent}

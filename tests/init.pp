@@ -10,10 +10,12 @@
 #
 class {'php':
 	etclink => true,
-	#modules => ['apc','pgsql'],
+	modules => ['apc','pgsql','mysql','sybase','xdebug'],
 }
 
-#php::module::purge{'apc':}
-php::module::install{'apc':}
-php::module::install{'mysql':}
-php::module::install{'pgsql':}
+#php::module::install{'apc':}
+#php::module::install{'mysql':}
+#php::module::install{'pgsql':}
+#php::module::install{'sybase':}
+#php::module::install{'xdebug':}
+#php::module::purge{'xdebug':}
