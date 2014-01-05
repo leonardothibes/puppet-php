@@ -11,7 +11,7 @@
 class {'php':
 	etclink => true,
 	modules => ['apc','pgsql','mysql','sybase','xdebug'],
-	extra   => ['code-sniffer','phing']
+	extra   => ['code-sniffer','phing','phpdoc']
 }
 
 #php::module::install{'apc':}
