@@ -8,7 +8,6 @@ class php::extra::phing
 		require => Class[php::extra::pear],
 		before  => Exec['phing-step-2'],
 	}
-
 	exec {'phing-step-2':
 		command => 'pear install --alldeps phing/phing',
 		path    => '/usr/bin',
