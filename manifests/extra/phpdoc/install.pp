@@ -1,4 +1,4 @@
-class php::extra::phpdoc
+class php::extra::phpdoc::install
 {
 	include php::extra::pear
 	php::module::install {'xsl':}

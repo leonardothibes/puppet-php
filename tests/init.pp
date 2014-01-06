@@ -12,7 +12,6 @@ class {'php':
 	modules        => ['apc','pgsql','mysql','sybase','xdebug'],
 	extra          => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
 	display_errors => 'Off',
-	etclink        => true,
 }
 
 #php::module::install{'apc':}

@@ -1,4 +1,4 @@
-class php::extra::phing
+class php::extra::phing::install
 {
 	include php::extra::pear
 	exec {'phing-step-1':

@@ -1,4 +1,4 @@
-class php::extra::code-sniffer
+class php::extra::code-sniffer::install
 {
 	include php::extra::pear
 	exec {'code-sniffer':

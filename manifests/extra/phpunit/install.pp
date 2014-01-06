@@ -1,4 +1,4 @@
-class php::extra::phpunit
+class php::extra::phpunit::install
 {
 	wget::fetch {'wget-phpunit':
 		source      => 'https://phar.phpunit.de/phpunit.phar',

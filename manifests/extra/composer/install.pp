@@ -1,4 +1,4 @@
-class php::extra::composer
+class php::extra::composer::install
 {
 	package {'curl': ensure => present}
 	exec    {'composer-step-1':

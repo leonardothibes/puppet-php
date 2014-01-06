@@ -1,4 +1,4 @@
-class php::extra::s3cmd
+class php::extra::s3cmd::install
 {
 	require wget
 	exec {'s3cmd-step-1':
