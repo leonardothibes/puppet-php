@@ -10,13 +10,16 @@
 #
 class {'php':
 	modules        => ['apc','pgsql','mysql','sybase','xdebug'],
-	extra          => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+	#extra          => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+	extra          => ['phing','phpdoc','composer','phpunit','s3cmd'],
 	display_errors => 'Off',
 }
 
-#php::module::install{'apc':}
-#php::module::install{'mysql':}
-#php::module::install{'pgsql':}
-#php::module::install{'sybase':}
-#php::module::install{'xdebug':}
-#php::module::purge{'xdebug':}
+#php::module::install {'apc':}
+#php::module::install {'mysql':}
+#php::module::install {'pgsql':}
+#php::module::install {'sybase':}
+#php::module::install {'xdebug':}
+
+#php::module::purge {'xdebug':}
+php::extra::purge {'code-sniffer':}

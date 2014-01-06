@@ -5,4 +5,10 @@ class php::extra
 		$install = "php::extra::${extra}::install"
 		include $install
 	}
+
+	define purge($extra = $title)
+	{
+		$install = "php::extra::${extra}::purge"
+		include $install
+	}
 }
