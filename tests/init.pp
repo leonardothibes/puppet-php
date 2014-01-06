@@ -11,7 +11,7 @@
 class {'php':
 	modules        => ['apc','pgsql','mysql','sybase','xdebug'],
 	#extra          => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
-	extra          => ['phing','phpdoc','phpunit','s3cmd'],
+	extra          => ['phpdoc','phpunit','s3cmd'],
 	display_errors => 'Off',
 }
 
@@ -24,3 +24,4 @@ class {'php':
 #php::module::purge {'xdebug':}
 php::extra::purge {'code-sniffer':}
 php::extra::purge {'composer':}
+php::extra::purge {'phing':}
