@@ -23,6 +23,6 @@ class {'php':
 #php::module::install {'xdebug':}
 
 #php::module::purge {'xdebug':}
-#php::extra::purge {'composer':}
 #php::extra::install {'phing':}
 #php::extra::install {'phpdoc':}
+#php::extra::purge {'phpdoc':}
