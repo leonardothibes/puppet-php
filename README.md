@@ -20,7 +20,12 @@ node default {
 Install PHP and change default params in php.ini:
 ```puppet
 node default {
-	class {'php':}
+	class {'php':
+		display_errors  => 'Off',
+		error_reporting => 'E_ALL',
+		memory_limit    => '512',
+		error_log       => '/var/log/php.log',
+	}
 }
 ```
 
