@@ -13,7 +13,6 @@ class php::extra::s3cmd::install
 		path    => ['/bin','/usr/bin'],
 		onlyif  => 'test ! -f /usr/bin/s3cmd',
 		require => Exec['php::extra::s3cmd::install::step-1'],
-		before  => Exec['php::extra::s3cmd::install::step-3'],
 	}
 	package {'s3cmd':
 		ensure => present,
