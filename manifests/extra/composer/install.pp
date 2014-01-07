@@ -3,7 +3,7 @@ class php::extra::composer::install
 	if !defined(Package['curl']) {
 		package {'curl': ensure => present}
 	}
-	exec {'composer-step-1':
+	exec {'php::extra::composer::install':
 		command => 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin',
 		path    => "/usr/bin",
 		onlyif  => "test ! -f /usr/bin/composer.phar",
