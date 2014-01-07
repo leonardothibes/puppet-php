@@ -17,50 +17,72 @@ node default {
 }
 ```
 
+Install PHP and change default params in php.ini:
+```puppet
+node default {
+	class {'php':}
+}
+```
+
 Install PHP and some modules:
 ```puppet
-class {'php':
-	modules => ['apc','mysql','pgsql']
+node default {
+	class {'php':
+		modules => ['apc','mysql','pgsql']
+	}
 }
 ```
 or
 ```puppet
-class {'php':}
-php::module::install{'apc':}
-php::module::install{'mysql':}
-php::module::install{'pgsql':}
+node default {
+	class {'php':}
+	php::module::install{'apc':}
+	php::module::install{'mysql':}
+	php::module::install{'pgsql':}
+}
 ```
 
 Purge modules:
 ```puppet
-php::module::purge{'apc':}
-php::module::purge{'xdebug':}
+node default {
+	php::module::purge{'apc':}
+	php::module::purge{'xdebug':}
+}
 ```
 or
 ```puppet
-php::module::purge{['apc','xdebug']:}
+node default {
+	php::module::purge{['apc','xdebug']:}
+}
 ```
 
 Install PHP and some development tools:
 ```puppet
-class {'php':
-	extra => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+node default {
+	class {'php':
+		extra => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd']
+	}
+}
 ```
 or
 ```puppet
+node default {
 class {'php':}
-php::extra::install {'code-sniffer':}
-php::extra::install {'phing':}
-php::extra::install {'phpdoc':}
-php::extra::install {'phpunit':}
-php::extra::install {'composer':}
-php::extra::install {'s3cmd':}
+	php::extra::install {'code-sniffer':}
+	php::extra::install {'phing':}
+	php::extra::install {'phpdoc':}
+	php::extra::install {'phpunit':}
+	php::extra::install {'composer':}
+	php::extra::install {'s3cmd':}
+}
 ```
 
 Purge completly PHP:
 ```puppet
-class {'php':
-	ensure => absent
+node default {
+	class {'php':
+		ensure => absent
+	}
 }
 ```
 
