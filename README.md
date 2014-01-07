@@ -41,6 +41,22 @@ or
 php::module::purge{['apc','xdebug']:}
 ```
 
+Install PHP and some development tools:
+```puppet
+class {'php':
+	extra => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
+```
+or
+```puppet
+class {'php':}
+php::extra::install {'code-sniffer':}
+php::extra::install {'phing':}
+php::extra::install {'phpdoc':}
+php::extra::install {'phpunit':}
+php::extra::install {'composer':}
+php::extra::install {'s3cmd':}
+```
+
 Purge completly PHP:
 ```puppet
 class {'php':
