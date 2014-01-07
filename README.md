@@ -69,6 +69,21 @@ node default {
 	}
 }
 ```
+
+Purge development tools:
+```puppet
+node default {
+	php::extra::purge{'code-sniffer':}
+	php::extra::purge{'composer':}
+}
+```
+or
+```puppet
+node default {
+	php::extra::purge{['code-sniffer','composer']:}
+}
+```
+
 or
 ```puppet
 node default {
