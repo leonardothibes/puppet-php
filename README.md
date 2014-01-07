@@ -34,6 +34,11 @@ php::module::install{'pgsql':}
 Purge modules:
 ```puppet
 php::module::purge{'apc':}
+php::module::purge{'xdebug':}
+```
+or
+```puppet
+php::module::purge{['apc','xdebug']:}
 ```
 
 Purge completly PHP:
