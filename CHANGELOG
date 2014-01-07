@@ -1,3 +1,11 @@
+2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Separando a instalação do PHP em uma classe a parte
+  * Implementando a desinstalação dos extras(phpunit, composer, phing...)
+  * Elaborando exemplos de uso melhores
+
 2014-01-05 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ===========================================================
 
