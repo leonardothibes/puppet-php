@@ -1,7 +1,7 @@
 define php::install($etclink = $title)
 {
 	# PHP packages instalation
-	package {$php::params::packages: ensure => $ensure}
+	php::secure::install {$php::params::packages:}
 
 	# PHP.ini definitions
 	$files = [
