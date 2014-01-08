@@ -1,7 +1,13 @@
-2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
+2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.2
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
+	* implementando protecao a instalacao de pacotes com nomes duplicados
+
+2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (3):
   * Separando a instalação do PHP em uma classe a parte
   * Implementando a desinstalação dos extras(phpunit, composer, phing...)
   * Elaborando exemplos de uso melhores
