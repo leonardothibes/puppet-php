@@ -1,8 +1,15 @@
+2014-01-21 Leonardo Thibes <eu@leonardothibes.com> - 1.0.3
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (2):
+	* Alterando a forma de instalar o phing para usar o phar, evitando assim o timeout do pear #9
+	* Alias para módulo: mssql->sybase #6
+
 2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.2
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
-	* implementando protecao a instalacao de pacotes com nomes duplicados
+	* Implementando protecao a instalacao de pacotes com nomes duplicados
 
 2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
 ===========================================================

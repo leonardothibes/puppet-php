@@ -2,10 +2,10 @@ class php::module
 {
 	define install($module = $title)
 	{
-		if $module == 'apc' {
-			$modulename = 'php-apc'
-		} else {
-			$modulename = "php5-${module}"
+		case $module {
+			'apc'  : {$modulename = 'php-apc'       }
+			'mssql': {$modulename = 'php5-sybase'   }
+			default: {$modulename = "php5-${module}"}
 		}
 		if !defined(Package[$modulename]) {
 			package {$modulename:
@@ -18,10 +18,10 @@ class php::module
 
 	define purge($module = $title)
 	{
-		if $module == 'apc' {
-			$modulename = 'php-apc'
-		} else {
-			$modulename = "php5-${module}"
+		case $module {
+			'apc'  : {$modulename = 'php-apc'       }
+			'mssql': {$modulename = 'php5-sybase'   }
+			default: {$modulename = "php5-${module}"}
 		}
 		package {$modulename: ensure => absent}
 	}

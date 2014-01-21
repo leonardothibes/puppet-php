@@ -9,7 +9,7 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'php':
-	modules         => ['apc','pgsql','mysql','sybase','xdebug'],
+	modules         => ['apc','pgsql','mysql','mssql','xdebug'],
 	extra           => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
 	display_errors  => 'Off',
 	error_reporting => 'E_ALL',
@@ -19,7 +19,7 @@ class {'php':
 #php::module::install {'apc':}
 #php::module::install {'mysql':}
 #php::module::install {'pgsql':}
-#php::module::install {'sybase':}
+#php::module::install {'mssql':}
 #php::module::install {'xdebug':}
 
 #php::module::purge {'xdebug':}
