@@ -1,10 +1,16 @@
 class php::extra::phing::install
 {
-	include php::extra::pear
-	exec {'php::extra::phing::install':
-		command => 'pear install --alldeps pear.phing.info/phing',
-		path    => '/usr/bin',
-		onlyif  => 'test ! -f /usr/bin/phing',
-		require => Class[php::extra::pear],
+	wget::fetch {'php::extra::phing::install::step-1':
+		source      => 'http://www.phing.info/get/phing-latest.phar',
+		destination => '/usr/bin/Phing.phar',
+		before      => Exec['php::extra::phing::install::step-2'],
+	}
+	exec {'php::extra::phing::install::step-2':
+		command => 'chmod 755 /usr/bin/Phing.phar',
+		path    => '/bin',
+	}
+	file {'/usr/bin/phing':
+		ensure => link,
+		target => '/usr/bin/Phing.phar',
 	}
 }

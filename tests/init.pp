@@ -24,5 +24,6 @@ class {'php':
 
 #php::module::purge {'xdebug':}
 #php::extra::install {'phing':}
+#php::extra::purge {'phing':}
 #php::extra::install {'phpdoc':}
 #php::extra::purge {'phpdoc':}
