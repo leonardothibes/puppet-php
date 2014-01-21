@@ -25,6 +25,7 @@ node default {
 		error_reporting => 'E_ALL',
 		memory_limit    => '512',
 		error_log       => '/var/log/php.log',
+		include_path    => ['/path/to/your/library','/usr/share/php'] # "." is not necessary inform
 	}
 }
 ```
