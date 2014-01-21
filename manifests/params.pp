@@ -31,7 +31,7 @@ class php::params
 	$default_charset         = "utf-8"
 	$default_mimetype        = "text/html"
 	$date_timezone           = "America/Sao_Paulo"
-	$include_path            = ".:/usr/share/php"
+	$include_path            = ['/usr/share/php']
 	$mysql_default_socket    = "/var/run/mysqld/mysqld.sock"
 	# PHP.INI options (compatibility)
 

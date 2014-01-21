@@ -793,7 +793,7 @@ default_charset = "<%=@default_charset%>"
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; UNIX: "/path1:/path2"
-include_path = "<%=@include_path%>"
+include_path = ".<%@include_path.each do |path|%>:<%=path%><%end-%>"
 ;
 ; Windows: "\path1;\path2"
 ;include_path = ".;c:\php\includes"
