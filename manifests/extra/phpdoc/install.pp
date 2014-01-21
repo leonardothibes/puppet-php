@@ -1,11 +1,15 @@
 class php::extra::phpdoc::install
 {
-	include php::extra::pear
 	php::module::install {'xsl':}
-	exec {'php::extra::phpdoc::install':
-		command => 'pear install pear.phpdoc.org/phpDocumentor-alpha',
-		path    => '/usr/bin',
-		onlyif  => 'test ! -f /usr/bin/phpdoc',
-		require => Class[php::extra::pear],
+	wget::fetch {'php::extra::phpdoc::install':
+		source      => 'http://phpdoc.org/phpDocumentor.phar',
+		destination => '/usr/bin/phpDocumentor.phar',
+	}
+	file {'/etc/profile.d/phpdoc.sh':
+		ensure  => present,
+		owner   => root,
+		group   => root,
+		mode    => 0644,
+		content => "alias phpdoc='php /usr/bin/phpDocumentor.phar'",
 	}
 }
