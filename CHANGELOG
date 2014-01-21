@@ -2,15 +2,15 @@
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (3):
-	* Alterando a forma de instalar o phing para usar o phar, evitando assim o timeout do pear #9
-	* Implementando alteração para nformar o include_path do PHP como array #11
-	* Alias para módulo: mssql->sybase #6
+  * Alterando a forma de instalar o phing para usar o phar, evitando assim o timeout do pear #9
+  * Implementando alteração para nformar o include_path do PHP como array #11
+  * Alias para módulo: mssql->sybase #6
 
 2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.2
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
-	* Implementando protecao a instalacao de pacotes com nomes duplicados
+  * Implementando protecao a instalacao de pacotes com nomes duplicados
 
 2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
 ===========================================================
