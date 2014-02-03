@@ -1,8 +1,8 @@
 class php::extra::composer::install
 {
-	if !defined(Package['curl']) {
-		package {'curl': ensure => present}
-	}
+	php::module::install {'curl':}
+	php::secure::install {'curl':}
+	php::secure::install {'git':}
 	exec {'php::extra::composer::install':
 		command => 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin',
 		path    => "/usr/bin",
