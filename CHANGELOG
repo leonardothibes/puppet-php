@@ -1,3 +1,9 @@
+2014-02-03 Leonardo Thibes <eu@leonardothibes.com> - 1.0.5
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Incluindo os pacotes git, curl e php5-curl como dependência na instalação do composer #13
+
 2014-01-21 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
 ===========================================================
 
