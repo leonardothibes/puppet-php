@@ -1,8 +1,8 @@
 class php::extra::composer::install
 {
-	php::module::install {'curl':}
-	php::secure::install {'curl':}
 	php::secure::install {'git':}
+	php::secure::install {'curl':}
+	php::secure::install {'php5-curl':}
 	exec {'php::extra::composer::install':
 		command => 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin',
 		path    => "/usr/bin",
