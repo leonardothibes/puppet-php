@@ -1,6 +1,6 @@
 name    'leonardothibes-php'
 author  'leonardothibes'
-version '1.0.6'
+version '1.0.7'
 license 'MIT'
 summary 'A puppet module to manage PHP'
 description 'A puppet module to manage PHP'
