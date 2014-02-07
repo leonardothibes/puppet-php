@@ -1,3 +1,9 @@
+2014-02-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Alterando procedimento de instalação do PHPUnit para ser via PEAR #14
+
 2014-02-03 Leonardo Thibes <eu@leonardothibes.com> - 1.0.6
 ===========================================================
 
