@@ -1,8 +1,8 @@
 class php::extra::phpunit::install
 {
 	include php::extra::pear
-    php::secure::install {'curl':}
-    php::secure::install {'php5-curl':}
+	php::secure::install {'curl':}
+	php::secure::install {'php5-curl':}
 	exec {'php::extra::phpunit::step-1':
 		command => 'pear install pear.phpunit.de/PHPUnit',
         path    => '/usr/bin',
