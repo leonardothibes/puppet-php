@@ -1,4 +1,4 @@
-class php::module
+class php::module inherits php::dependencies
 {
 	define install($module = $title)
 	{
