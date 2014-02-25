@@ -1,6 +1,5 @@
-class php::extra::phpunit::install
+class php::extra::phpunit::install inherits php::extra::pear
 {
-	include php::extra::pear
 	php::secure::install {'curl':}
 	php::secure::install {'php5-curl':}
 	exec {'php::extra::phpunit::step-1':
