@@ -1,6 +1,5 @@
-class php::extra::composer::install
+class php::extra::composer::install inherits php::dependencies
 {
-	include php::dependencies
 	$packages = ['git','curl','php5-curl']
 	package {'php::extra::composer::dependencies::packages':
 		ensure => present,
@@ -11,7 +10,7 @@ class php::extra::composer::install
 		path    => "/usr/bin",
 		onlyif  => "test ! -f /usr/bin/composer.phar",
 		require => [
-			Package['curl'],
+			Package['php::extra::composer::dependencies::packages'],
 			Class['php::dependencies'],
 		],
 	}
