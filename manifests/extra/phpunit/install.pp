@@ -1,7 +1,12 @@
 class php::extra::phpunit::install inherits php::extra::pear
 {
-	php::secure::install {'curl':}
-	php::secure::install {'php5-curl':}
+	$packages = 'php::extra::phpunit::dependencies::packages'
+	if !defined(Package[$packages]) {
+		package {$packages:
+			ensure => present,
+			name   => ['curl','php5-curl'],
+		}
+	}
 	exec {'php::extra::phpunit::step-1':
 		command => 'pear install pear.phpunit.de/PHPUnit',
         path    => '/usr/bin',
@@ -19,7 +24,7 @@ class php::extra::phpunit::install inherits php::extra::pear
 		require => [
 			Class['php::extra::pear'],
 			Exec['php::extra::phpunit::step-1'],
-			Package['curl','php5-curl'],
+			Package[$packages],
 		],
 	}
 	exec {'php::extra::phpunit::step-3':
