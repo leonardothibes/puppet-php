@@ -1,7 +1,6 @@
 define php::install($etclink = $title)
 {
-	# PHP packages instalation
-	php::secure::install {$php::params::packages:}
+	include php::dependencies
 
 	# PHP.ini definitions
 	$files = [
@@ -14,7 +13,7 @@ define php::install($etclink = $title)
 		owner   => root,
 		group   => root,
 		mode    => 0644,
-		require => Package[$php::params::packages],
+		require => Class['php::dependencies'],
 		before  => Exec['restart-php-ini'],
 	}
 	php::apache::restart {'restart-php-ini':}
@@ -24,7 +23,7 @@ define php::install($etclink = $title)
 	file {'/etc/php.ini':
 		ensure  => link,
 		target  => "${php::params::confdir}/apache2/php.ini",
-		require => Package[$php::params::packages],
+		require => Class['php::dependencies'],
 	}
 	# PHP.ini link in /etc
 }
