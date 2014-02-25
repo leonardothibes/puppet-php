@@ -1,4 +1,4 @@
-class php::extra::phing::install
+class php::extra::phing::install inherits php::dependencies
 {
 	wget::fetch {'php::extra::phing::install::step-1':
 		source      => 'http://www.phing.info/get/phing-latest.phar',
