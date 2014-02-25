@@ -1,4 +1,4 @@
-class php::extra::phpdoc::install
+class php::extra::phpdoc::install inherits php::dependencies
 {
 	php::module::install {'xsl':}
 	wget::fetch {'php::extra::phpdoc::install':
