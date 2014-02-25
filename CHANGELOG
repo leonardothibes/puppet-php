@@ -1,8 +1,12 @@
-2014-02-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
+2014-02-25 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
 ===========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (1):
+ Leonardo Thibes <eu@leonardothibes.com> (5):
   * Alterando procedimento de instalação do PHPUnit para ser via PEAR #14
+  * Incluindo os pacotes do PHP como dependencia em todos os modulos e extras #24
+  * Removendo a classe php::secure::install #26
+  * Diversas correções de bugs
+  * Melhorias na estabilidade e interdependência de pacotes
 
 2014-02-03 Leonardo Thibes <eu@leonardothibes.com> - 1.0.6
 ===========================================================
