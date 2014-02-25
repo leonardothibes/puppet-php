@@ -1,7 +1,10 @@
-class php::dependencies
+class php::dependencies inherits php::params
 {
-	package {'php::dependencies::packages':
-		ensure => present,
-		name   => $php::params::packages,
+	$resource = 'php::dependencies::packages'
+	if !defined(Package[$resource]) {
+		package {$resource:
+			ensure => present,
+			name   => $php::params::packages,
+		}
 	}
 }
