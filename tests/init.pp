@@ -9,11 +9,13 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'php':
-	modules         => ['apc','pgsql','mysql','mssql','xdebug'],
-	extra           => ['code-sniffer','phing','phpdoc','composer','phpunit','s3cmd'],
-	display_errors  => 'Off',
-	error_reporting => 'E_ALL',
-	memory_limit    => '512',
+	modules          => ['apc','xdebug','mysql','pgsql','mssql'],
+	extra            => ['code-sniffer','phing','phpdoc','phpcpd','composer','phpunit','s3cmd'],
+	register_globals => 'Off',
+	short_open_tag   => 'Off',
+	display_errors   => 'Off',
+	error_reporting  => 'E_ALL',
+	memory_limit     => '512',
 }
 
 #php::module::install {'apc':}
@@ -21,9 +23,3 @@ class {'php':
 #php::module::install {'pgsql':}
 #php::module::install {'mssql':}
 #php::module::install {'xdebug':}
-
-#php::module::purge {'xdebug':}
-#php::extra::install {'phing':}
-#php::extra::purge {'phing':}
-#php::extra::install {'phpdoc':}
-#php::extra::purge {'phpdoc':}
