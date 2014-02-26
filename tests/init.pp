@@ -9,8 +9,18 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'php':
-	#modules          => ['apc','xdebug','mysql','pgsql','mssql'],
-	extra            => ['code-sniffer','phing','phpdoc','phpcpd','phpdcd','composer','phpunit','s3cmd'],
+	modules          => ['apc','xdebug','mysql','pgsql','mssql'],
+	extra            => [
+		'code-sniffer',
+		'phing',
+		'phpdoc',
+		'phpcpd',
+		'phpdcd',
+		'phploc',
+		'composer',
+		'phpunit',
+		's3cmd'
+	],
 	register_globals => 'Off',
 	short_open_tag   => 'Off',
 	display_errors   => 'Off',
@@ -24,4 +34,5 @@ class {'php':
 #php::module::install {'mssql':}
 #php::module::install {'xdebug':}
 
-#php::extra::install {'phpdcd':}
+#php::extra::install {'phploc':}
+#php::extra::purge {'phploc':}
