@@ -15,7 +15,7 @@ class php::extra::s3cmd::install
 		require => Exec['php::extra::s3cmd::install::step-1'],
 	}
 	package {'s3cmd':
-		ensure => present,
+		ensure  => present,
 		require => Exec['php::extra::s3cmd::install::step-2'],
 	}
 }
