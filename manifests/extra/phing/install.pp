@@ -1,13 +1,9 @@
 class php::extra::phing::install inherits php::dependencies
 {
-	wget::fetch {'php::extra::phing::install::step-1':
+	wget::fetch {'php::extra::phing::install':
 		source      => 'http://www.phing.info/get/phing-latest.phar',
 		destination => '/usr/bin/Phing.phar',
-		before      => Exec['php::extra::phing::install::step-2'],
-	}
-	exec {'php::extra::phing::install::step-2':
-		command => 'chmod 755 /usr/bin/Phing.phar',
-		path    => '/bin',
+		chmod       => 0755,
 	}
 	file {'/usr/bin/phing':
 		ensure => link,
