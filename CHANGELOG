@@ -1,4 +1,11 @@
-2014-02-26 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
+2014-02-26 Leonardo Thibes <eu@leonardothibes.com> - 1.1.0
+==========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Aproveitando novos recursos do módulo de download "leonardothibes/wget"
+  * Implementando a instalação do phpdcd #21
+
+2014-02-26 Leonardo Thibes <eu@leonardothibes.com> - 1.0.8
 ==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
