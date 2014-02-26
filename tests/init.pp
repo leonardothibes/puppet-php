@@ -19,7 +19,8 @@ class {'php':
 		'phploc',
 		'composer',
 		'phpunit',
-		's3cmd'
+		's3cmd',
+		'hhvm-wrapper',
 	],
 	register_globals => 'Off',
 	short_open_tag   => 'Off',
@@ -34,5 +35,5 @@ class {'php':
 #php::module::install {'mssql':}
 #php::module::install {'xdebug':}
 
-#php::extra::install {'phploc':}
-#php::extra::purge {'phploc':}
+#php::extra::install {'hhvm-wrapper':}
+#php::extra::purge {'hhvm-wrapper':}
