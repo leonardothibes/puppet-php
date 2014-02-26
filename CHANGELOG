@@ -1,5 +1,11 @@
+2014-02-26 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
+==========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Implementando a instalação do phpcpd #20
+
 2014-02-25 Leonardo Thibes <eu@leonardothibes.com> - 1.0.7
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (5):
   * Alterando procedimento de instalação do PHPUnit para ser via PEAR #14
@@ -9,20 +15,20 @@
   * Melhorias na estabilidade e interdependência de pacotes
 
 2014-02-03 Leonardo Thibes <eu@leonardothibes.com> - 1.0.6
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
   * Incluindo os pacotes git, curl e php5-curl como dependência na instalação do composer #13
   * Fixed bugs
 
 2014-01-21 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
   * Alterando a forma de instalar o phpdoc para usar o phar, evitando assim o timeout do pear #12
 
 2014-01-21 Leonardo Thibes <eu@leonardothibes.com> - 1.0.3
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (3):
   * Alterando a forma de instalar o phing para usar o phar, evitando assim o timeout do pear #9
@@ -30,13 +36,13 @@
   * Alias para módulo: mssql->sybase #6
 
 2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.2
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
   * Implementando protecao a instalacao de pacotes com nomes duplicados
 
 2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (3):
   * Separando a instalação do PHP em uma classe a parte
@@ -44,7 +50,7 @@
   * Elaborando exemplos de uso melhores
 
 2014-01-05 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
-===========================================================
+==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
   * Implementando as classes do módulo
