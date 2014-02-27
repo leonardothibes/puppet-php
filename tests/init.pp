@@ -14,9 +14,12 @@ class {'php':
 		'code-sniffer',
 		'phing',
 		'phpdoc',
+		'phpdox',
 		'phpcpd',
 		'phpdcd',
 		'phploc',
+		'phpmd',
+		'phpdepend',
 		'composer',
 		'phpunit',
 		's3cmd',
@@ -33,7 +36,8 @@ class {'php':
 #php::module::install {'mysql':}
 #php::module::install {'pgsql':}
 #php::module::install {'mssql':}
-#php::module::install {'xdebug':}
+#php::module::install {'imagick':}
 
-#php::extra::install {'hhvm-wrapper':}
-#php::extra::purge {'hhvm-wrapper':}
+#php::extra::install {'phpdepend':}
+#php::extra::install {'phpmd':}
+#php::extra::purge {'phpmd':}
