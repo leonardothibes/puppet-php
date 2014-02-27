@@ -15,7 +15,7 @@ class php::extra::pear inherits php::dependencies
 	}
 
 	exec {'php::extra::pear::step-3':
-		command => 'pecl chanel-update pecl.php.net',
+		command => 'pear update-channels',
 		path    => '/usr/bin',
 		require => Exec['php::extra::pear::step-2'],
 	}
