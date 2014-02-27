@@ -1,4 +1,4 @@
-class php::extra::phpunit::purge
+class php::extra::phpdepend::purge
 {
-	file {'/usr/bin/phpunit': ensure => absent}
+	file {'/usr/bin/phpdepend': ensure => absent}
 }
