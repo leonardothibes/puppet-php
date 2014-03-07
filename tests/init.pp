@@ -9,9 +9,8 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'php':
-	modules          => ['apc','xdebug','mysql','pgsql','mssql'],
-	extra            => [
-		'code-sniffer',
+	modules => ['apc','xdebug','mysql','pgsql','mssql'],
+	extra   => [
 		'phing',
 		'phpdoc',
 		'phpdox',
@@ -22,6 +21,7 @@ class {'php':
 		'phpdepend',
 		'composer',
 		'phpunit',
+		'phpcs',
 		's3cmd',
 		'hhvm-wrapper',
 	],

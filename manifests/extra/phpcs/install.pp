@@ -1,7 +1,7 @@
-class php::extra::code-sniffer::install inherits php::dependencies
+class php::extra::phpcs::install inherits php::dependencies
 {
 	include php::extra::pear
-	exec {'php::extra::code-sniffer::install':
+	exec {'php::extra::phpcs::install':
 		command => 'pear install --alldeps PHP_CodeSniffer',
 		path    => '/usr/bin',
 		onlyif  => 'test ! -f /usr/bin/phpcs',
