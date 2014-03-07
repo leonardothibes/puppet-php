@@ -24,6 +24,7 @@ class {'php':
 		'phpcs',
 		's3cmd',
 		'hhvm-wrapper',
+		'yuicompressor',
 	],
 	register_globals => 'Off',
 	short_open_tag   => 'Off',
@@ -38,6 +39,5 @@ class {'php':
 #php::module::install {'mssql':}
 #php::module::install {'imagick':}
 
-#php::extra::install {'phpdepend':}
-#php::extra::install {'phpmd':}
-#php::extra::purge {'phpmd':}
+#php::extra::install {'yuicompressor':}
+#php::extra::purge {'yuicompressor':}
