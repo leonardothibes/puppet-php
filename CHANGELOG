@@ -1,6 +1,12 @@
 2014-02-27 Leonardo Thibes <eu@leonardothibes.com> - 1.2.0
 ==========================================================
 
+ Leonardo Thibes <eu@leonardothibes.com> (@@@@@@):
+  * Renomeando extra "code-sniffer" para "phpcs" #29
+
+2014-02-27 Leonardo Thibes <eu@leonardothibes.com> - 1.2.0
+==========================================================
+
  Leonardo Thibes <eu@leonardothibes.com> (4):
   * Implementando a instalação do phpdepend #18
   * Implementando a instalação do phpdox #23
