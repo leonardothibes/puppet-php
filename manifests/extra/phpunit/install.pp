@@ -59,9 +59,19 @@ class php::extra::phpunit::install inherits php::extra::pear
 		command => 'pear install pear.phpunit.de/PHPUnit_SkeletonGenerator',
 		path    => '/usr/bin',
 		onlyif  => 'test ! -d /usr/share/php/SebastianBergmann/PHPUnit/SkeletonGenerator',
+		before  => Exec['php::extra::phpunit::step-7'],
 		require => [
 			Class['php::extra::pear'],
 			Exec['php::extra::phpunit::step-5'],
+		],
+	}
+	exec {'php::extra::phpunit::step-7':
+		command => 'pear install pear.phpunit.de/Diff',
+		path    => '/usr/bin',
+		onlyif  => 'test ! -d /usr/share/php/SebastianBergmann/Diff',
+		require => [
+			Class['php::extra::pear'],
+			Exec['php::extra::phpunit::step-6'],
 		],
 	}
 }
