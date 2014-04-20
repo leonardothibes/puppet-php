@@ -1,6 +1,6 @@
 class php::extra::phpdoc::install inherits php::dependencies
 {
-	$packages = 'php::extra::phpdox::dependencies::packages'
+	$packages = 'php::extra::phpdoc::dependencies::packages'
 	if !defined(Package[$packages]) {
 		package {$packages:
 			ensure => present,
