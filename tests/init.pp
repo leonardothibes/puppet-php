@@ -11,6 +11,7 @@
 class {'php':
 	modules => ['apc','xdebug','mysql','pgsql','mssql'],
 	extra   => [
+		'composer',
 		'phing',
 		'phpdoc',
 		'phpdox',
@@ -19,7 +20,6 @@ class {'php':
 		'phploc',
 		'phpmd',
 		'phpdepend',
-		'composer',
 		'phpunit',
 		'phpcs',
 		's3cmd',
