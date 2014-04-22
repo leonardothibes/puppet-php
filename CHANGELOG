@@ -1,8 +1,9 @@
 2014-04-22 Leonardo Thibes <eu@leonardothibes.com> - 1.3.3
 ==========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (1):
+Leonardo Thibes <eu@leonardothibes.com> (2):
   * Voltando a instalar o PHPUnit via Phar devido ao encerramento do suporte ao pear
+  * Correções gerais e melhorias de estabilidade
 
 2014-04-22 Leonardo Thibes <eu@leonardothibes.com> - 1.3.2
 ==========================================================
