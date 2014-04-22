@@ -1,11 +1,8 @@
 class php::extra::phpdoc::install inherits php::dependencies
 {
-	$packages = 'php::extra::phpdoc::dependencies::packages'
-	if !defined(Package[$packages]) {
-		package {$packages:
-			ensure => present,
-			name   => 'php5-xsl',
-		}
+	$package = 'php5-xsl'
+	if !defined(Package[$package]) {
+		package {$package: ensure => present}
 	}
 	wget::fetch {'php::extra::phpdoc::install':
 		source      => 'http://phpdoc.org/phpDocumentor.phar',
