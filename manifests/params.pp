@@ -3,6 +3,7 @@ class php::params
 	# Install options
 	$ensure   = "present"
 	$confdir  = "/etc/php5"
+	$pear     = "/usr/share/php"
 	$modules  = []
 	$extra    = []
 	$packages = [
@@ -31,7 +32,7 @@ class php::params
 	$default_charset         = "utf-8"
 	$default_mimetype        = "text/html"
 	$date_timezone           = "America/Sao_Paulo"
-	$include_path            = ['/usr/share/php']
+	$include_path            = [$pear]
 	$mysql_default_socket    = "/var/run/mysqld/mysqld.sock"
 	# PHP.INI options (compatibility)
 
@@ -68,6 +69,6 @@ class php::params
 	$expose_php              = "Off"
 	$register_globals        = "Off"
 	$disable_classes         = ""
-	$disable_functions       = "pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,"
+	$disable_functions       = "pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority"
 	# PHP.INI options (security)
 }
