@@ -26,17 +26,17 @@ class php::extra::phpunit::install inherits php::dependencies
 	}
 	exec {'php::extra::phpunit::step-3':
 		command => "${begin_cmd} 'phpunit/php-invoker=*' ${end_cmd}",
-		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/php-invoker]",
+		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/php-invoker ]",
 		before  => Exec ['php::extra::phpunit::step-4'],
 	}
 	exec {'php::extra::phpunit::step-4':
 		command => "${begin_cmd} 'phpunit/phpunit-story=*' ${end_cmd}",
-		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/phpunit-story]",
+		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/phpunit-story ]",
 		before  => Exec ['php::extra::phpunit::step-5'],
 	}
 	exec {'php::extra::phpunit::step-5':
 		command => "${begin_cmd} 'phpunit/phpunit-selenium=*' ${end_cmd}",
-		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/phpunit-selenium]",
+		onlyif  => "[ ! -d ${php::params::pear}/vendor/phpunit/phpunit-selenium ]",
 		before  => Exec ['php::extra::phpunit::step-6'],
 	}
 	exec {'php::extra::phpunit::step-6':
