@@ -2,8 +2,8 @@
 ==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (3):
-  * Passando a instalar o PHPUnit via Composer
-  * Implementando a instalação dos extras do PHPUnit #35
+  * Passando a instalar o PHPUnit via Composer #35
+  * Implementando a instalação dos extras do PHPUnit #36
   * Correções gerais e melhorias de estabilidade
 
 2014-04-22 Leonardo Thibes <eu@leonardothibes.com> - 1.3.3
