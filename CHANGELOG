@@ -1,3 +1,11 @@
+2014-04-23 Leonardo Thibes <eu@leonardothibes.com> - 1.3.4
+==========================================================
+
+Leonardo Thibes <eu@leonardothibes.com> (3):
+  * Passando a instalar o PHPUnit via Composer
+  * Implementando a instalação dos extras do PHPUnit #35
+  * Correções gerais e melhorias de estabilidade
+
 2014-04-22 Leonardo Thibes <eu@leonardothibes.com> - 1.3.3
 ==========================================================
 
