@@ -33,6 +33,11 @@ class {'php':
 	memory_limit     => '512',
 }
 
+php::extra::s3cmd::params {'vagrant':
+	access_key => 'access',
+	secret_key => 'secret',
+}
+
 #php::module::install {'apc':}
 #php::module::install {'mysql':}
 #php::module::install {'pgsql':}
