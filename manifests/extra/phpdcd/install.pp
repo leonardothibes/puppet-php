@@ -4,5 +4,6 @@ class php::extra::phpdcd::install inherits php::dependencies
 		source      => 'https://phar.phpunit.de/phpdcd.phar',
 		destination => '/usr/bin/phpdcd',
 		chmod       => 0755,
+		nocheckcert => true,
 	}
 }
