@@ -4,5 +4,6 @@ class php::extra::phpcpd::install inherits php::dependencies
 		source      => 'https://phar.phpunit.de/phpcpd.phar',
 		destination => '/usr/bin/phpcpd',
 		chmod       => 0755,
+		nocheckcert => true,
 	}
 }
